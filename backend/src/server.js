@@ -46,5 +46,8 @@ const startServer = async () => {
     console.error("💥 Error starting the server", error);
   }
 };
+app.get("/", (req, res) => {
+  res.json({ status: "API is running 🚀" });
+});
 
 startServer();
